@@ -83,7 +83,7 @@ myScrollFuncComments = function() {
         animCommentsContainer.classList.add('animation');
     }
 
-    if (y > 7200) {
+    if (y > 8000) {
         animCommentsImg.classList.remove('animation');
         animCommentsImgDecor1.classList.remove('animation');
         animCommentsImgDecor2.classList.remove('animation');
