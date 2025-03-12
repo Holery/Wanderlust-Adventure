@@ -475,7 +475,7 @@ body {
             padding: 30px;
             background-color: white;
             height: 450px;
-            width: 320px;
+            max-width: 320px;
             border-radius: 20px;
             margin: 0 40px 0 40px;
             letter-spacing: 2px;
@@ -683,7 +683,7 @@ body {
     
     .holiday_text {
         height: 200px;
-        width: 400px;
+        max-width: 400px;
         color: white;
         font-family: sans-serif;
         position: relative;
