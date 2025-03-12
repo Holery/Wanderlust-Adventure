@@ -1,0 +1,797 @@
+body {
+    margin: 0;
+    background: #333333;
+    caret-color: transparent;
+    overflow-x: hidden;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #424242;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 2;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 0 0 20px black;
+
+    .header_name p {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #DB545A;
+        letter-spacing: 2px;
+    }
+    
+    .header_name p span {
+        color: #f58a24;
+    }
+
+    .header_menu ul {
+        list-style: none;
+        font-family:sans-serif;
+        font-size: 18px;
+        color: rgb(182, 182, 182);
+    }
+
+    .header_menu ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 850px;
+    background:
+        linear-gradient(rgba(208, 204, 255, 0.5), rgba(0, 0, 0, 0.5)),
+        url(img/home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 100%;
+
+    .homepage_text {
+        text-align: center;
+        color: white;
+
+        p {
+            font-family: arial;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-family: arial;
+            font-size: 92px;
+        }
+
+        h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 24;
+            font-weight: lighter;
+        }
+    }
+
+    .homepage_button button {
+        border: 2px solid white;
+        border-radius: 30px;
+        margin-top: 60px;
+        padding: 20px 60px;
+        background-color: transparent;
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .homepage_button button:hover {
+        background-color: white;
+        color: black;
+
+        transition: all ease-in-out 0.1s;
+        cursor: pointer;
+    }
+}
+
+.list_info {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: -40px;
+
+    .list_info_block {
+        border: 5px #f58a24 solid;
+        border-radius: 32px;
+        text-align: center;
+        color: white;
+        padding: 30;
+        height: 304px;
+        width: 220px;
+        word-break: break-all;
+        background-color: #333333;
+        margin: 0 30px;
+        transition: opacity 1.5s ease; 
+        transform: 1.5s ease;
+
+        img {
+            width: 64px;
+            height: 64px;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-family: sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: arial;
+            font-weight: lighter;
+            font-size: 18px;
+        }
+    }
+}
+
+.good_trips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    .good_trips_text {
+        text-align: start;
+        margin-top: 100px;
+        padding-left: 400px;
+
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.5s ease;
+        transform: translateX(-100%);
+
+        p {
+            color: #f58a24;
+            font-family: sans-serif;
+            font-size: 36px;
+        }
+
+        h1 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        button {
+            border: 2px solid #f58a24;
+            border-radius: 30px;
+            margin-top: 40px;
+            padding: 20px 60px;
+            background-color: transparent;
+            color: #f58a24;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;           
+        }
+
+        button:hover {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+    
+            transition: all ease-in-out 0.1s;
+            cursor: pointer;
+        }
+    }
+
+    .good_trips_img {
+            background: url(img/4525451.jpg) no-repeat 0px;
+            background-size: 100%;
+            border-radius: 50%;
+            height: 580px;
+            width: 580px;
+            margin: 250px 300px 0 200px;
+            
+            opacity: 0;
+            transition: opacity 2s ease, transform 2s ease;
+            transform: translateX(100%);
+
+            .good_trips_img_decor_1 {
+                height: 150px;
+                width: 150px;
+                margin: 0 0 0 350px;
+                position: relative;
+                top: -90px;
+                z-index: -1;
+                border: 50px solid #f58a24;
+                border-radius: 50%;
+            }
+
+            .good_trips_img_decor_2 {
+                height: 75;
+                width: 75;
+                border: 25px solid #f58a24;
+                border-radius: 50%;
+                position: relative;
+                left: -80px;
+                top: -80px;
+            }
+
+            .good_trips_img_decor_3 {
+                position: relative;
+                left: -120px;
+                top: 20px;
+                --c: #f58a24;   /* Цвет */
+                --t:10px;   /* Толщина */
+                --h:27px;  /* Высота (расстояние по вертикали между двумя кривыми) */
+                --w:200px; /* Ширина  */
+                --p:8px;  /* отрегулируйте это, чтобы исправить положение при изменении других значений*/
+                background:
+                    radial-gradient(farthest-side at 50% calc(100% + var(--p)), transparent 47%, var(--c) 50% calc(50% + var(--t)),transparent calc(52% + var(--t))),
+                    radial-gradient(farthest-side at 50% calc(0%   - var(--p)), transparent 47%, var(--c) 50% calc(50% + var(--t)),transparent calc(52% + var(--t)));
+                background-size:var(--w) var(--h);
+                background-position:calc(var(--w)/2) calc(var(--h)/2),0px calc(var(--h)/2);
+                margin:15px 0;
+                display:inline-block;
+                width:390px;
+                height:133px;
+                transform: scale(0.7);
+            }
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    visibility: hidden;
+
+    .gallery_img_1 {
+        background: url(img/gallery_img_1.jpg) no-repeat 0px;
+        background-size:cover;
+        border-radius: 50%;
+        height: 276px;
+        min-width: 276px;
+        position: relative;
+        top: 40px;
+        left: 250px;
+
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.5s ease;
+        transform: translateX(-100%);
+    }
+
+    .gallery_img_2 {
+        background: url(img/gallery_img_2.jpg) no-repeat 0px;
+        background-size:cover;
+        border-radius: 50%;
+        border: 20px #f58a24 solid;
+        height: 389px;
+        min-width: 389px;
+        position: relative;
+        top: 390px;
+        left: 60px;
+        z-index: 1;
+
+        opacity: 0;
+        transition: opacity 1s ease, transform 1.5s ease;
+        transform: translateY(45%);
+    }
+
+    .gallery_img_3 {
+        background: url(img/gallery_img_3.jpg) no-repeat 0px;
+        background-size:cover;
+        border-radius: 50%;
+        border: 10px white solid;
+        height: 628px;
+        min-width: 628px;
+        position: relative;
+        right: 100px;
+        
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.5s ease;
+        transform: translateX(100%);
+    }
+
+    .gallery_decor_1 {
+        height: 119px;
+        width: 119px;
+        border: 25px #f58a24 solid;
+        border-radius: 50%;
+        position: relative;
+        top: 310px;
+        right: 110px;
+
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.5s ease;
+        transform: translateY(100%);
+    }
+
+    .gallery_decor_2 {
+        height: 200px;
+        width: 200px;
+        border: 60px #555C66 solid;
+        border-radius: 50%;
+        position: relative;
+        top: 410px;
+        left: 360px;
+
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.5s ease;
+        transform: translateY(100%);
+    }
+}
+
+.gallery_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 300px;
+
+    p {
+        color: white;
+        font-family: sans-serif;
+        font-size: 48px;
+    }
+
+    h1 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    .gallery_text_button button {
+        border: 2px solid white;
+        border-radius: 30px;
+        margin-top: 60px;
+        padding: 20px 60px;
+        background-color: transparent;
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .gallery_text_button button:hover {
+        background-color: white;
+        color: black;
+
+        transition: all ease-in-out 0.1s;
+        cursor: pointer;
+    }
+}
+
+.journeys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    visibility: hidden;
+
+    .journeys_text p {
+        position: relative;
+        right: 40%;
+        color: white;
+        text-align: start;
+        font-family: sans-serif;
+        font-size: 48px;
+
+        opacity: 0;
+        transition: opacity 2s ease, transform 1.8s ease;
+        transform: translateX(-100%);
+    }
+
+    .journeys_container {
+        width: 450px;
+        position: relative;
+        right: 200px;
+
+        .journeys_container_text {
+            border: 3px solid white;
+            border-radius: 32px;
+            background-color: white;
+            padding: 30px;
+
+            opacity: 0;
+            transition: opacity 2s ease, transform 2s ease;
+            transform: translateX(-100%);
+
+            p {
+                color: black;
+                font-family: sans-serif;
+                font-size: 18px;
+            }
+
+            .journeys_container_button button{
+                border: 2px solid #f58a24;
+                border-radius: 30px;
+                margin-top: 60px;
+                padding: 20px 60px;
+                background-color: transparent;
+                color: #f58a24;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1px; 
+            }
+
+            .journeys_container_button button:hover {
+                background-color: black;
+                color: white;
+                border: 2px solid black;
+                border-radius: 30px;
+        
+                transition: all ease-in-out 0.1s;
+                cursor: pointer;
+            }
+        }
+
+        .journeys_container_img {
+            background-image: url(img/journeys.jpg);
+            background-size: cover;
+            position: relative;
+            bottom: 500px;
+            left: 620px;
+            height: 422px;
+            width: 422px;
+            border-radius: 50%;
+
+            opacity: 0;
+            transition: opacity 2s ease, transform 2s ease;
+            transform: translateX(100%);
+        }
+    }
+}
+
+.tours {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -180px;
+
+    p {
+        color: white;
+        font-family: sans-serif;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .tours_container {
+        display: flex;
+        justify-content: center;
+        .tours_container_info {
+            padding: 30px;
+            background-color: white;
+            height: 450px;
+            width: 320px;
+            border-radius: 20px;
+            margin: 0 40px 0 40px;
+            letter-spacing: 2px;
+
+            .tours_container_img_1 {
+                background-image: url(img/tours1.jpg);
+                background-size: cover;
+                border-radius: 50%;
+                height: 147px;
+                width: 147px;
+            }
+            .tours_container_img_2 {
+                background-image: url(img/tours2.jpg);
+                background-size: cover;
+                border-radius: 50%;
+                height: 147px;
+                width: 147px;
+            }
+            .tours_container_img_3 {
+                background-image: url(img/tours3.jpg);
+                background-size: cover;
+                border-radius: 50%;
+                height: 147px;
+                width: 147px;
+            }
+
+            h1 {
+                color: black;
+                font-family: sans-serif;
+                font-weight: lighter;
+                font-size: 24px;
+                margin-top: 40px;
+            }
+
+            h2 {
+                color: gray;
+                font-family: sans-serif;
+                font-weight: lighter;
+                font-size: 20px;
+                margin-top: 40px;
+            }
+
+            h3 {
+                color: black;
+                font-family: sans-serif;
+                font-weight: lighter;
+                letter-spacing: 2px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.comments {
+    display: flex;
+    justify-content: center;
+    margin-top: 220px;
+    visibility: hidden;
+
+    .comments_img {
+        background-image: url(img/woman-enjoying-beautiful-rural-surroundings.jpg);
+        background-size: cover;
+        background-position: 70%;
+        border-radius: 50%;
+        height: 650px;
+        min-width: 650px;
+        left: 300px;
+        position: relative;
+        box-shadow: 10px 10px 5px #282a2d;
+        z-index: -1;
+
+        opacity: 0;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+        transform: translateX(-100%);
+    }
+    .comments_img_decor_1 {
+        height: 145px;
+        min-width: 145px;
+        background-color: #f58a24;
+        border-radius: 50%;
+        position: relative;
+        right: 400px;
+        top: 650px;
+
+        opacity: 0;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+        transform: translateX(-500%) translateY(100%);
+    }
+    .comments_img_decor_2 {
+        height: 150px;
+        min-width: 150px;
+        border: 60px #555C66 solid;
+        border-radius: 50%;
+        position: relative;
+        left: 200px;
+
+        opacity: 0.1;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+        transform: translateX(200%) translateY(100%);
+    }
+    
+    .comments_container {
+        position: relative;
+        background-color: white;
+        height: 650px;
+        width: 500px;
+        border-radius: 20px;
+        padding: 0px 40px;
+        right: 340px;
+        top: 460px;
+
+        opacity: 0;
+        transition: opacity 1.2s ease, transform 1.2s ease;
+        transform: translateX(100%) translateY(50%);
+    }
+
+    h1 {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 60px;
+        text-align: left;
+    }
+
+    p {
+        font-family: sans-serif;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: gray;
+        line-height: 1.5;
+    }
+
+    .comments_container_button button{
+        border: 2px solid #f58a24;
+        border-radius: 30px;
+        margin-top: 60px;
+        padding: 20px 60px;
+        background-color: #f58a24;
+        color: white;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px; 
+    }
+
+    .comments_container_button button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid #f58a24;
+        border-radius: 30px;
+
+        transition: all ease-in-out 0.1s;
+        cursor: pointer;
+    }
+}
+
+.comments_text {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    margin-top: 620px;
+    visibility: hidden;
+
+    opacity: 0.1;
+    transition: opacity 1s ease;
+
+    .comment_text_1 {
+        padding: 0 20px;
+        span {
+            color: #f58a24;
+            font-size: 100px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: white;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            margin-top: -10px;
+        }
+
+        h2 {
+            color: white;
+            font-family: sans-serif;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.holiday {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 765px;
+    width: 100%;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+        url(img/man-with-rucksack-admires-gorgeous-mountain-555.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    .holiday_text {
+        height: 200px;
+        width: 400px;
+        color: white;
+        font-family: sans-serif;
+        position: relative;
+        right: 350px;
+        top: 150px;
+
+        opacity: 0;
+        transition:  opacity 2s ease, transform 2s ease;
+        transform: translateX(-150%);
+        h1 {
+            font-size: 56px;
+        }
+        p {
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 1.5;
+        }
+
+        .holiday_social {
+            height: 100px;
+            width: 400px;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.contactUs {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .contactUs_form {
+        height: 600px;
+        width: 900px;
+        text-align: center;
+
+        h1 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 62px;
+            text-align: center;
+        }
+        
+        input {
+            height: 50px;
+            width: 40%;
+            background-color: #424242;
+            border: none;
+            border-bottom: 2px solid white;
+            padding: 0 10px;
+            margin: 0 10px;
+            font-family: sans-serif;
+            font-size: 16px;
+            color: gray;
+        }
+
+        textarea {
+            margin-top: 30px;
+            height: 180px;
+            width: 82.5%;
+            background-color: #424242;
+            border: none;
+            border-bottom: 2px solid white;
+            padding: 10px 10px;
+            resize: none;
+
+            font-family: sans-serif;
+            font-size: 16px;
+            color: gray;
+        }
+
+        .contactUs_button button{
+            border: 2px solid #f58a24;
+            border-radius: 30px;
+            margin-top: 60px;
+            padding: 20px 160px;
+            background-color: #f58a24;
+            color: white;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px; 
+        }
+    
+        .contactUs_button button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid white;
+            border-radius: 30px;
+    
+            transition: all ease-in-out 0.1s;
+            cursor: pointer;
+        }
+    }
+}
+
+footer {
+    height: 200px;
+    background-color: #282a2d;
+
+    p {
+        color: gray;
+        font-family: sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 50px;
+    }
+}

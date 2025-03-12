@@ -1,0 +1,86 @@
+.good_trips {
+    .good_trips_img.animation {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .good_trips_text.animation {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.gallery {
+    .gallery_img_1.animation {
+        opacity: 1;
+        transform: translateX(0);
+
+        .gallery_decor_1.animation {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .gallery_img_2.animation {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .gallery_img_3.animation {
+        opacity: 1;
+        transform: translateX(0);
+
+        .gallery_decor_2.animation {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.journeys {
+    .journeys_container_text.animation {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .journeys_container_img.animation {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .journeys_text p.animation{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.comments {
+    .comments_img.animation {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .comments_img_decor_1.animation {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+
+    .comments_img_decor_2.animation {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+
+    .comments_container.animation {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.comments_text.animation {
+    opacity: 1;
+}
+
+.holiday_text.animation {
+    opacity: 1;
+    transform: translateX(0);
+}
